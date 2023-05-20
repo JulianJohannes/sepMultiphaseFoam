@@ -19,7 +19,7 @@ solvers
 {
     "alpha.*"
     {
-    <!--(if solver=="interFoam")-->
+    <!--(if solver=="interFoam" or solver=="leiaLevelSetTwoPhaseFoam")-->
         nAlphaCorr      1;
         nAlphaSubCycles 2;
         cAlpha          1;
