@@ -18,5 +18,5 @@ decomposePar
 <!--(if "interFlow" in solver)-->
 mpirun -n |-N_CORES_TOTAL-| interFlow -parallel
 <!--(else)-->
-mpirun -n |-N_CORES_TOTAL-| |-solver-| -parallel
+sbatch constant/lichtenberg-run.sbatch 
 <!--(end)-->

@@ -70,7 +70,7 @@ def compute_cores(values):
 
     res_to_cores = {32 : 4,
                     64 : 4,
-                    128 : 8}
+                    128 : 4}
 
     if res not in res_to_cores.keys():
         print("Error: decomposition not available for resolution", res, ".")
