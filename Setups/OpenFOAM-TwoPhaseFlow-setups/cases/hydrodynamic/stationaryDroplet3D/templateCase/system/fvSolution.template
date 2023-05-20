@@ -91,6 +91,56 @@ solvers
     {
         $U;
     }
+
+    "psi|psiFinal"
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-10;
+        relTol          0;
+    }
+}
+
+
+levelSet
+{
+    implicitSurface 
+    {
+        type implicitSphere; 
+        center (0.005 0.005 0.005); 
+        radius 0.001;
+    }
+
+
+    profile
+    {
+        type signedDistance;
+    }
+
+    phaseIndicator
+    {
+        type geometric;
+    }
+
+    redistancer 
+    {
+        type noRedistancing;
+    }
+
+    surfaceTensionForce
+    {
+        //type traceGradGradPsiSnGradAlpha;
+        type traceGradGeoNormalSnGradAlpha;
+        alpha alpha.dispersed;
+
+        //type constantCurvatureSurfaceTension;
+        //curvature 1000; 
+    }
+
+    narrowBand	
+    {
+        type    signChange;
+    }
 }
 
 

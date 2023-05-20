@@ -3,8 +3,8 @@
 # Create mesh
 |-MESHER-|
 
-# Initialize alpha field
-setAlphaField
+# Initialize data 
+leiaSetFields -alphaName alpha.dispersed
 
 <!--(if N_CORES_TOTAL > 1)-->
 # Decompose for parallel computation. Only if more than 1 core is used.
