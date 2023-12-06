@@ -16,7 +16,7 @@ leiaSetFields -alphaName alpha.dispersed
 leiaLevelSetTwoPhaseFoam 
 
 cd postProcessing/
-python -c "import pandas as pd; \
+python3 -c "import pandas as pd; \
     dfmax = pd.read_csv('minMaxU/0/fieldMinMax.dat', delim_whitespace=True, \
                         comment='#', header=None, names=['time', 'min_error_velocity', 'max_error_velocity']); \
     dfl1 = pd.read_csv('l1normU/0/volFieldValue.dat', delim_whitespace=True, comment='#', header=None); \
